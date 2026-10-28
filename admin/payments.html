@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payments</title>
+  </head>
+  <body>
+    <h1>Payments</h1>
+    <a href="index.html">Dashboard</a>
+    <pre id="payments">Loading...</pre>
+    <script>
+      fetch("/payments/")
+        .then((res) => res.json())
+        .then((data) => {
+          document.getElementById("payments").textContent = JSON.stringify(data, null, 2);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay for Access</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>M-Pesa Payment</h1>
+      <form id="payment-form">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" required placeholder="2547XXXXXXXX" />
+        <label for="package">Package</label>
+        <select id="package" name="package"></select>
+        <label for="amount">Amount</label>
+        <input id="amount" name="amount" required />
+        <label for="account">Account</label>
+        <input id="account" name="account" required />
+        <button type="submit">Pay</button>
+      </form>
+    </main>
+    <script src="js/portal.js"></script>
+  </body>
+</html>

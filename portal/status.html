@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Status</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Payment Status</h1>
+      <p id="status">Checking...</p>
+      <a href="index.html">Back to portal</a>
+    </main>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("status").textContent = params.get("status") || "pending";
+    </script>
+  </body>
+</html>
